@@ -13,10 +13,10 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',        //本地数据库
+    //'hostname'        => '127.0.0.1',        //本地数据库
     //'hostname'        => '192.168.0.171',  //虚拟机数据库
-    //'hostname'        => '192.168.1.154',  //aliyun数据库
-//'hostname'        => '120.79.220.206',  //aliyun数据库
+    'hostname'        => '192.168.1.154',  //aliyun数据库
+    //'hostname'        => '120.79.220.206',  //aliyun数据库
 
     // 数据库名
     'database'        => 'blog',
@@ -24,9 +24,9 @@ return [
     'username'        => 'root',
     // 密码
     //'password'        => 'zxd123.13',
-    'password'        => 'root',
+    'password'        => 'zxd19950808',
     // 端口
-    'hostport'        => '3306',
+    'hostport'        => '33066',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数
