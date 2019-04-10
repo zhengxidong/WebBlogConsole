@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    管理平台-文章管理
+    </title>
+    <!--<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" type="text/css" />-->
+	<link href="__STATIC__/manage/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" />
+  <link href="__STATIC__/manage/stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" />
+	<script src="__STATIC__/manage/javascripts/jquery.min.js" type="text/javascript"></script>
+	<script src="__STATIC__/manage/javascripts/jquery-ui.js" type="text/javascript"></script>
+	<script src="__STATIC__/manage/javascripts/bootstrap.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/raphael.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/selectivizr-min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.mousewheel.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.vmap.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.vmap.world.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/fullcalendar.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/gcal.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/datatable-editable.js" type="text/javascript"></script> -->
+  <script src="__STATIC__/manage/javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/excanvas.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.isotope.min.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/isotope_extras.js" type="text/javascript"></script> -->
+  <script src="__STATIC__/manage/javascripts/modernizr.custom.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/select2.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/styleswitcher.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/wysiwyg.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/summernote.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.inputmask.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.validate.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/bootstrap-fileupload.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/bootstrap-datepicker.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/bootstrap-timepicker.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/bootstrap-colorpicker.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/bootstrap-switch.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/typeahead.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/daterange-picker.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/date.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/morris.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/skycons.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/fitvids.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/jquery.sparkline.min.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/main.js" type="text/javascript"></script> -->
+  <script src="__STATIC__/manage/javascripts/respond.js" type="text/javascript"></script>
+
+  <!-- 引入markdown -->
+  <!-- <link rel="stylesheet" href="__STATIC__/manage/editor_md/css/style.css" /> -->
+  <link rel="stylesheet" href="__STATIC__/manage/editor_md/css/editormd.css" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="modal-shiftfix">
+      <!-- Navigation -->
+      <div class="navbar navbar-fixed-top scroll-hide">
+        <div class="container-fluid top-bar">
+
+          <div class="pull-right">
+            <ul class="nav navbar-nav pull-right">
+              <li class="dropdown notifications hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
+                  <div class="sr-only">
+                    Notifications
+                  </div>
+                  <p class="counter">
+                    4
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New user added: Jane Smith
+                    </p></a>
+
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      Sales targets available
+                    </p></a>
+
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New performance metric added
+                    </p></a>
+
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New growth data available
+                    </p></a>
+
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown messages hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-envelope"></span>
+                  <div class="sr-only">
+                    Messages
+                  </div>
+                  <p class="counter">
+                    3
+                  </p>
+                </a>
+                <ul class="dropdown-menu messages">
+                  <li><a href="#">
+                    <img width="34" height="34" src="__STATIC__/manage/images/avatar-male2.png" />Could we meet today? I wanted...</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="__STATIC__/manage/images/avatar-female.png" />Important data needs your analysis...</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="__STATIC__/manage/images/avatar-male2.png" />Buy Se7en today, it's a great theme...</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown settings hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
+                  <div class="sr-only">
+                    Settings
+                  </div>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>蓝色</a>
+                  </li>
+                  <li>
+                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>绿色</a>
+                  </li>
+                  <li>
+                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>橙色</a>
+                  </li>
+                  <li>
+                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>紫色</a>
+                  </li>
+                  <li>
+                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>灰色</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img width="34" height="34" src="__STATIC__/manage/images/avatar-male.jpg" />{:session('admin_info.admin_user')}<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">
+                    <i class="icon-user"></i>个人信息</a>
+                  </li>
+                  <li><a href="#">
+                    <i class="icon-gear"></i>个人设置</a>
+                  </li>
+                  <li><a href="{:url('admin/logout')}">
+                    <i class="icon-signout"></i>注销</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index-2.html">se7en</a>
+          <form class="navbar-form form-inline col-lg-2 hidden-xs">
+            <input class="form-control" placeholder="Search" type="text">
+          </form>
+        </div>
+        <div class="container-fluid main-nav clearfix">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="{:url('index/index')}"><span aria-hidden="true" class="se7en-home"></span>面板</a>
+              </li>
+              <li><a href="{:url('article/index')}"  class="current">
+                <span aria-hidden="true" class="se7en-feed"></span>文章管理</a>
+              </li>
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-star"></span>评论管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="buttons.html">Buttons</a>
+                  </li>
+                  <li>
+                    <a href="fontawesome.html">Font Awesome Icons</a>
+                  </li>
+                  <li><a href="glyphicons.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Glyphicons
+                    </p></a>
+
+                  </li>
+                  <li>
+                    <a href="components.html">Components</a>
+                  </li>
+                  <li>
+                    <a href="widgets.html">Widgets</a>
+                  </li>
+                  <li>
+                    <a href="typo.html">Typography</a>
+                  </li>
+                  <li>
+                    <a href="grid.html">Grid Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown current"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-forms"></span>友情链接<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a class="current" href="form-components.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Form Components
+                    </p></a>
+
+                  </li>
+                  <li>
+                    <a href="form-advanced.html">Advanced Forms</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-tables"></span>资源站<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="tables.html">Basic tables</a>
+                  </li>
+                  <li>
+                    <a href="datatables.html">DataTables</a>
+                  </li>
+                  <li><a href="datatables-editable.html">
+                    <div class="notifications label label-warning">
+                      New
+                    </div>
+                    <p>
+                      Editable DataTables
+                    </p></a>
+
+                  </li>
+                </ul>
+              </li>
+              <li><a href="charts.html">
+                <span aria-hidden="true" class="se7en-gallery"></span>相册</a>
+              </li>
+              <li><a href="gallery.html">
+                <span aria-hidden="true" class="se7en-gear"></span>系统设置</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Navigation -->
+      <div class="container-fluid main-content"><div class="page-title">
+  <!-- <h1>
+    文章
+  </h1> -->
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <form action="{:url('article/add')}" method="post" class="form-horizontal">
+      <div class="heading">
+        <i class="icon-reorder"></i>发布文章
+          <button class="btn btn-primary" style="float:right;" type="submit">发布</button>
+      </div>
+      <div class="widget-content padded">
+
+          <div class="form-group">
+            <label class="control-label col-md-2">文章标题</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="" type="text" name="title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">摘录</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="" type="text" name="excerpt">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">状态</label>
+            <div class="col-md-7">
+              <label class="checkbox-inline"><input type="checkbox" checked name="status"><span>公开</span></label>
+              <label class="checkbox-inline"><input type="checkbox" name="status"><span>不公开</span></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">密码</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="默认空" type="text" name="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">文章缩略名</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="默认空" type="text" name="name">
+            </div>
+          </div>
+          <div class="form-group" >
+            <label class="control-label col-md-2"></label>
+            <div style="padding:0 0;" class="col-md-7" id="test-editormd">
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-collapse"></i>Select2 Dropdowns
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Select2 Dropdown</label>
+            <div class="col-md-7">
+              <select class="select2able"><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Multi-Select2</label>
+            <div class="col-md-7">
+              <select class="select2able" multiple=""><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-collapse"></i>Autocomplete
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">U.S. States</label>
+            <div class="col-md-7">
+              <input autocomplete="off" class="form-control states typeahead tt-query" dir="auto" placeholder="Search for a U.S. state" spellcheck="false" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Countries</label>
+            <div class="col-md-7">
+              <input autocomplete="off" class="form-control countries typeahead tt-query" dir="auto" placeholder="Search for a country" spellcheck="false" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-check"></i>Toggle Switches
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Switch Sizes</label>
+            <div class="col-md-7">
+              <div class="toggle-switch switch-large">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch switch-small">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch switch-mini">
+                <input checked="" type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Switch Colors</label>
+            <div class="col-md-7">
+              <div class="toggle-switch" data-off="info" data-on="primary">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch" data-off="success" data-on="info">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch" data-off="warning" data-on="success">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch" data-off="danger" data-on="warning">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch" data-off="default" data-on="danger">
+                <input checked="" type="checkbox">
+              </div>
+              <div class="toggle-switch" data-off="primary" data-on="default">
+                <input checked="" type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Different Labels</label>
+            <div class="col-md-7">
+              <div class="toggle-switch text-toggle-switch" data-off-label="GOODBYE" data-on="primary" data-on-label="HELLO" style="width:200px;">
+                <input checked="" type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Authentic Toggle Switch</label>
+            <div class="col-md-7 clearfix">
+              <div class="holder">
+                <input checked="checked" class="check-ios" id="check" name="check" type="checkbox" value="None"><label for="check"></label><span></span>
+              </div>
+              <em>(works only in modern browsers)</em>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="widget-container">
+      <div class="heading">
+        <i class="icon-shield"></i>Form Validation
+      </div>
+      <div class="widget-content padded">
+        <form action="#" id="validate-form" method="get">
+          <fieldset>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstname">First Name</label><input class="form-control" id="firstname" name="firstname" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label><input class="form-control" id="username" name="username" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label><input class="form-control" id="password" name="password" type="password">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lastname">Last Name</label><input class="form-control" id="lastname" name="lastname" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label><input class="form-control" id="email" name="email" type="email">
+                </div>
+                <div class="form-group">
+                  <label for="confirm_password">Confirm Password</label><input class="form-control" id="confirm_password" name="confirm_password" type="password">
+                </div>
+              </div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Validate form">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="widget-container">
+      <div class="heading">
+        <i class="icon-shield"></i>Validation States
+      </div>
+      <div class="widget-content padded">
+        <div class="row">
+          <form class="col-md-6">
+            <div class="form-group has-warning">
+              <label class="control-label" for="inputWarning">Warning</label><input class="form-control" id="inputWarning" type="text">
+            </div>
+            <div class="form-group has-error">
+              <label class="control-label" for="inputError">Error</label><input class="form-control" id="inputError" type="text">
+            </div>
+            <div class="form-group has-success">
+              <label class="control-label" for="inputSuccess">Success</label><input class="form-control" id="inputSuccess" type="text">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-calendar"></i>Date Pickers
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Default</label>
+            <div class="col-md-3">
+              <input class="form-control datepicker" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">As a Component</label>
+            <div class="col-md-3">
+              <div class="input-group date datepicker">
+                <input class="form-control" type="text"><span class="input-group-addon"><i class="icon-calendar"></i></span></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Autoclose</label>
+            <div class="col-md-3">
+              <div class="input-group date datepicker" data-date-autoclose="true" data-date-format="dd-mm-yyyy">
+                <input class="form-control" type="text"><span class="input-group-addon"><i class="icon-calendar"></i></span></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Start With the Year</label>
+            <div class="col-md-3">
+              <div class="input-group date datepicker" data-date-autoclose="true" data-date-format="dd.mm.yyyy" data-date-start-view="2">
+                <input class="form-control" type="text"><span class="input-group-addon"><i class="icon-calendar"></i></span></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Date Range 1</label>
+            <div class="col-sm-2">
+              <input class="form-control" data-date-autoclose="true" data-date-format="dd-mm-yyyy" id="dpd1" placeholder="Start date" type="text">
+            </div>
+            <div class="col-sm-2">
+              <input class="form-control" data-date-autoclose="true" data-date-format="dd-mm-yyyy" id="dpd2" placeholder="End date" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Date Range 2</label>
+            <div class="col-md-3">
+              <div class="input-group date">
+                <input class="form-control date-range" type="text"><span class="input-group-addon"><i class="icon-calendar"></i></span></input>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-time"></i>Time Pickers
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Default</label>
+            <div class="col-md-3">
+              <div class="input-group bootstrap-timepicker">
+                <input class="form-control" id="timepicker-default" type="text"><span class="input-group-addon"><i class="icon-time"></i></span></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">24 Hour</label>
+            <div class="col-md-3">
+              <div class="input-group bootstrap-timepicker">
+                <input class="form-control" id="timepicker-24h" type="text"><span class="input-group-addon"><i class="icon-time"></i></span></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">No Dropdown</label>
+            <div class="col-md-3">
+              <div class="bootstrap-timepicker">
+                <input class="form-control" id="timepicker-noTemplate" type="text"><i class="icon-time"></i>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-tint"></i>Color Pickers
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Default</label>
+            <div class="col-sm-4">
+              <input class="form-control" id="cp1" type="text" value="#8fff00">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">RGBA</label>
+            <div class="col-sm-4">
+              <input class="form-control" data-color-format="rgba" id="cp2" type="text" value="rgb(0,194,255,0.78)">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">As a Component</label>
+            <div class="col-sm-4">
+              <div class="input-group color" data-color="rgb(200, 0, 0)" data-color-format="rgb" id="cp3">
+                <input class="form-control" readonly="" type="text" value="rgb(200, 0, 0)"><span class="input-group-addon"><i style="background-color: rgb(200, 0, 0)"></i></span></input>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-reorder"></i>Input Masks
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Date 1</label>
+            <div class="col-md-3">
+              <input class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Date 2</label>
+            <div class="col-md-3">
+              <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Phone Number</label>
+            <div class="col-md-3">
+              <input class="form-control" data-inputmask="'mask': ['(999) 999-9999']" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Social Security #</label>
+            <div class="col-md-3">
+              <input class="form-control" data-inputmask="'mask': ['999-99-9999']" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-container">
+      <div class="heading">
+        <i class="icon-cloud-upload"></i>File Upload
+      </div>
+      <div class="widget-content padded">
+        <form action="#" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-md-2">Custom File Upload</label>
+            <div class="col-md-4">
+              <div class="fileupload fileupload-new" data-provides="fileupload">
+                <div class="input-group">
+                  <div class="form-control">
+                    <i class="icon-file fileupload-exists"></i><span class="fileupload-preview"></span>
+                  </div>
+                  <div class="input-group-btn">
+                    <a class="btn btn-default fileupload-exists" data-dismiss="fileupload" href="#">Remove</a><span class="btn btn-default btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">Without Input</label>
+            <div class="col-md-4">
+              <div class="fileupload fileupload-new" data-provides="fileupload">
+                <span class="btn btn-default btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file"></span><span class="fileupload-preview"></span><button class="close fileupload-exists" data-dismiss="fileupload" style="float:none" type="button">&times;</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">With Preview</label>
+            <div class="col-md-4">
+              <div class="fileupload fileupload-new" data-provides="fileupload">
+                <div class="fileupload-new img-thumbnail" style="width: 200px; height: 150px;">
+                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image">
+                </div>
+                <div class="fileupload-preview fileupload-exists img-thumbnail" style="width: 200px; max-height: 150px"></div>
+                <div>
+                  <span class="btn btn-default btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span><a class="btn btn-default fileupload-exists" data-dismiss="fileupload" href="#">Remove</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        <i class="icon-picture"></i>Drag and Drop Upload
+      </div>
+      <div class="widget-content padded">
+        <div class="single-file-drop">
+          <h4>
+            Drag and drop files here
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+      </div>
+    </div>
+    <!-- 引入markdown -->
+    <!-- <script src="__STATIC__/manage/editor_md/js/jquery.min.js"></script> -->
+    <script src="__STATIC__/manage/editor_md/js/editormd.js"></script>
+    <script type="text/javascript">
+        var testEditor;
+
+        $(function() {
+
+
+          testEditor = editormd("test-editormd", {
+              width: "100%",
+              height: 740,
+              path : '__STATIC__/manage/editor_md/lib/',
+              theme : "dark",
+              previewTheme : "dark",
+              editorTheme : "pastel-on-dark",
+              markdown : $("#test").text(),
+              codeFold : true,
+              //syncScrolling : false,
+              saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+              searchReplace : true,
+              //watch : false,                // 关闭实时预览
+              htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
+              //toolbar  : false,             //关闭工具栏
+              //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+              emoji : true,
+              taskList : true,
+              tocm            : true,         // Using [TOCM]
+              tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+              flowChart : true,             // 开启流程图支持，默认关闭
+              sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+              //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+              //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+              //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+              //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+              //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+              imageUpload : true,
+              imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+              imageUploadURL : "./php/upload.php",
+              onload : function() {
+                  console.log('onload', this);
+                  //this.fullscreen();
+                  //this.unwatch();
+                  //this.watch().fullscreen();
+
+                  //this.setMarkdown("#PHP");
+                  //this.width("100%");
+                  //this.height(480);
+                  //this.resize("100%", 640);
+              }
+          });
+            // $.get('__STATIC__/manage/editor_md/test.md', function(md){
+            //     testEditor = editormd("test-editormd", {
+            //         width: "100%",
+            //         height: 740,
+            //         path : '__STATIC__/manage/editor_md/lib/',
+            //         theme : "dark",
+            //         previewTheme : "dark",
+            //         editorTheme : "pastel-on-dark",
+            //         markdown : md,
+            //         codeFold : true,
+            //         //syncScrolling : false,
+            //         saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+            //         searchReplace : true,
+            //         //watch : false,                // 关闭实时预览
+            //         htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
+            //         //toolbar  : false,             //关闭工具栏
+            //         //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+            //         emoji : true,
+            //         taskList : true,
+            //         tocm            : true,         // Using [TOCM]
+            //         tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+            //         flowChart : true,             // 开启流程图支持，默认关闭
+            //         sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+            //         //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+            //         //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+            //         //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+            //         //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+            //         //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+            //         imageUpload : true,
+            //         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+            //         imageUploadURL : "./php/upload.php",
+            //         onload : function() {
+            //             console.log('onload', this);
+            //             //this.fullscreen();
+            //             //this.unwatch();
+            //             //this.watch().fullscreen();
+            //
+            //             //this.setMarkdown("#PHP");
+            //             //this.width("100%");
+            //             //this.height(480);
+            //             //this.resize("100%", 640);
+            //         }
+            //     });
+            // });
+
+            $("#goto-line-btn").bind("click", function(){
+                testEditor.gotoLine(90);
+            });
+
+            $("#show-btn").bind('click', function(){
+                testEditor.show();
+            });
+
+            $("#hide-btn").bind('click', function(){
+                testEditor.hide();
+            });
+
+            $("#get-md-btn").bind('click', function(){
+                alert(testEditor.getMarkdown());
+            });
+
+            $("#get-html-btn").bind('click', function() {
+                alert(testEditor.getHTML());
+            });
+
+            $("#watch-btn").bind('click', function() {
+                testEditor.watch();
+            });
+
+            $("#unwatch-btn").bind('click', function() {
+                testEditor.unwatch();
+            });
+
+            $("#preview-btn").bind('click', function() {
+                testEditor.previewing();
+            });
+
+            $("#fullscreen-btn").bind('click', function() {
+                testEditor.fullscreen();
+            });
+
+            $("#show-toolbar-btn").bind('click', function() {
+                testEditor.showToolbar();
+            });
+
+            $("#close-toolbar-btn").bind('click', function() {
+                testEditor.hideToolbar();
+            });
+
+            $("#toc-menu-btn").click(function(){
+                testEditor.config({
+                    tocDropdown   : true,
+                    tocTitle      : "目录 Table of Contents",
+                });
+            });
+
+            $("#toc-default-btn").click(function() {
+                testEditor.config("tocDropdown", false);
+            });
+        });
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,73 @@
+<div id="header" class="navbar navbar-default navbar-fixed-top header-01">
+  <div class="container">
+    <h1 class="logo">
+    <a  href="{:url('index/index')}" title="I Tell You"/>
+            <img  src="__STATIC__/index/img/20180318.png" alt="I Tell You">
+    </a>
+  </h1>
+    <div role="navigation" class="site-nav  primary-menu yincang">
+      <div class="menu-fix-box">
+        <ul id="menu-navigation" class="menu">
+          <!-- <li class="current-menu-item"><a href="{:url('index/index')}">首页</a></li> -->
+          {volist name="cateList" id="vo"}
+          <li><a href="{:url('header/show',['id'=>$vo.cate_id])}">{$vo.cate_name}</a></li>
+          {/volist}
+          <!-- <li><a href="">前端</a></li>
+          <li><a href="">后端</a></li>
+          <li><a href="">移动</a></li>
+          <li><a href="">数据库</a></li>
+          <li><a href="">服务器运维</a></li>
+          <li><a href="">爱分享</a></li>
+          <li><a href="">福利帮</a></li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="right-nav">
+      <div class="js-toggle-message">
+        <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="icon-bell-2"></i>
+        </button>
+        <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+          <!-- 修改手机端添加text-align: left -->
+          <ul style="text-align: left">
+            {volist name="articleListMsg" id="vo"}
+            <li class="first"><span class="time">{$vo.article_date|date="Y-m-d",strtotime(###)}</span>
+              <a target="_blank" href="{:url('index/article_details',['id'=>$vo.id])}">{$vo.article_title}</a>
+            </li>
+            {/volist}
+            <!-- <li><span class="time">18.02.08</span><a target="_blank" href="">iOS 9的iBoot源码泄露，将助于实现永久升降级！</a></li>
+            <li><span class="time">18.01.27</span><a target="_blank" href="">今年所有新款 iPhone 都会采用全新 L 型单电池！</a></li>
+            <li><span class="time">18.01.27</span><a target="_blank" href="">HomePod 播放音乐时比普通 LED 灯泡还省电！</a></li>
+            <li><span class="time">18.01.26</span><a target="_blank" href="">微信更新啦，增加一键切换账号！</a></li> -->
+          </ul>
+          <div class="more-messages"><a target="_blank" href="">更多</a></div>
+        </div>
+      </div>
+      <button class="js-toggle-search"><i class="icon-search"></i></button>
+    </div>
+
+    <div class="navbar-header">
+      <button type="button" class="burger-menu navbar-toggle">
+        <span class="menu-top"></span>
+        <span class="menu-bottom"></span>
+      </button>
+    </div>
+    <div class="body-overlay"></div>
+
+    <div class="nav-menu">
+
+
+      <ul id="menu-main-nav" class="main-nav">
+        <!-- <li class="current-menu-item"><a href="{:url('index/index')}">首页</a></li> -->
+        {volist name="cateList" id="vo"}
+        <li><a href="{:url('header/show',['id'=>$vo.cate_id])}">{$vo.cate_name}</a></li>
+        {/volist}
+      </ul>
+      <div class="close-nav">
+        <span class="close-top"></span>
+        <span class="close-bottom"></span>
+      </div>
+    </div>
+
+  </div>
+</div>

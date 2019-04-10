@@ -1,0 +1,75 @@
+.shareBox .bdsharebuttonbox{
+    padding: 30px 0 0;
+}
+.shareBox .bdsharebuttonbox a{
+       cursor: pointer;
+}
+.theme-thumb .social .shareBox {padding:20px 0 0}
+.theme-thumb .social .shareBox .bdsharebuttonbox{position:relative;float:left;display:block}
+
+.shareBox .bdsharebuttonbox .share-links{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    margin: 0 3px;
+    color: #FFF;
+}
+
+.shareBox .bdsharebuttonbox .bds_more{
+    background: #56b6e7;
+}
+.shareBox .bdsharebuttonbox .bds_sqq{
+    color: #00A9FF;      
+    border-color: #00A9FF;
+    font-size: 14px;
+}
+.shareBox .bdsharebuttonbox .bds_weixin{
+    background: #7bc549;
+}
+.shareBox .bdsharebuttonbox .bds_tsina{
+    background: #ec3d51;
+}
+.shareBox .bdsharebuttonbox .bds_qzone{
+    color: #ffe21f;      border-color: #ffe21f;
+}
+.shareBox .bdsharebuttonbox .bds_tqq{
+    background: #56b6e7;
+}
+.shareBox .bdsharebuttonbox .bds_tqf{
+    background: #00C5FF;
+}
+.shareBox .bdsharebuttonbox .bds_mail{
+    background: #FF6B00;
+}
+.shareBox .bdsharebuttonbox .bds_copy{
+    background: #495875;
+}
+
+.shareBox .bdsharebuttonbox i {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.shareBox  a.external {
+    width:0;
+    overflow:hidden;
+    margin:0;      
+    border: 0;
+    padding: 0;
+}
+.shareBox a.external i {
+    -webkit-transform:translate(0px,0px) rotate(180deg);
+    -ms-transform:translate(0px,0px) rotate(180deg);
+    transform:translate(0px,0px) rotate(180deg);
+    opacity:0}
+
