@@ -7,7 +7,7 @@
 > cd /home
 
 克隆项目
-> git clone https://github.com/zhengxidong/WebBlog.git
+> git clone https://github.com/zhengxidong/WebBlogConsole.git
 
 给上传图片目录建立软连接
 ln -s 源目录 目标目录
