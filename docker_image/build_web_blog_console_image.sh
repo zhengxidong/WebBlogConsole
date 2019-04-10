@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t web-blog .
+docker build -t web-blog-console .
