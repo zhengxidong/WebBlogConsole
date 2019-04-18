@@ -29,6 +29,9 @@ class Article extends Base
         $request = Request::instance();
         $data = $request->post();
 
+        
+
+
         if(empty($data))
         {
           //获取所有栏目
@@ -46,6 +49,13 @@ class Article extends Base
         else
         {
 
+          // $str = '<div class="markdown-toc editormd-markdown-toc">[TOC]</div><h2 id="h2-u5F00u53D1u73AFu5883"><a name="开发环境" class="reference-link"></a>';
+
+          // $result = preg_replace('#<div class="markdown-toc editormd-markdown-toc">\[TOC\]</div>#','',$str);
+
+          // echo $result;
+          // exit;
+          
           //DB操作
           // $data['article_author'] = 111;
           // $data['article_date'] = date('Y-m-d H:i:s');
@@ -72,23 +82,24 @@ class Article extends Base
           $articleTitle   = $data['title'];
           $articleExcerpt = $data['excerpt'];
           $articleContent = $data['test-editormd-markdown-doc'];
+          $articleCode    = $data['test-editormd-html-code'];
           $articleStatus  = empty($data['status']) ? '' : $data['status'];
           $articlePassword = $data['password'];
           $articleName     = $data['name'];
 
           try{
 
-          
             $articleData = [
 
-              'article_title'   => $articleTitle,                       //文章标题
-              'article_author'  => '1',                                 //文章作者ID
+              'article_title'   => $articleTitle,                         //文章标题
+              'article_author'  => '1',                                   //文章作者ID
               'article_date'    => date('Y-m-d H:i:s'),                   //文章发布时间
-              'article_excerpt' => $articleExcerpt,                   //文章摘录
-              'article_content' => $articleContent,//文章内容
+              'article_excerpt' => $articleExcerpt,                       //文章摘录
+              'article_content' => $articleContent,                       //文章内容
+              'article_content' => $articleCode,                          //文章源码，处理小程序
               'article_status'  => (empty($articleStatus)) ? 'close':'open',                              //文章状态，是否公开
               'article_password'=> $articlePassword,                        //文章密码
-              'article_name'    => $articleName,                         //文章缩略名
+              'article_name'    => $articleName,                           //文章缩略名
               'cate_id'         => $cateId
             ];
 
@@ -172,11 +183,18 @@ class Article extends Base
       {
 
         $data = $request->post();
+
+        //var_dump($data);
+        //print_r($data['test-editormd-html-code']);
+
+        //echo $data['test-editormd-html-code'];
+        //exit;
         $articleId = $data['id'];
         $article = ArticleModel::get($articleId);
         $article->article_title    = $data['title'];
         $article->article_excerpt  = $data['excerpt'];
         $article->article_content  = $data['test-editormd-markdown-doc'];
+        $article->article_code     = $data['test-editormd-html-code'];     //add by zhengxidong @2019-04-19 用以小程序展示
         $article->article_status   = (empty($data['status'])) ? 'close':'open';
         $article->article_password = $data['password'];
         $article->article_name     = $data['name'];
