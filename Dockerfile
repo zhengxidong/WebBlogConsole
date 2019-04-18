@@ -1,4 +1,4 @@
-FROM zhengxidong/lnp7.2
+FROM blog
 
 COPY ./application /usr/local/nginx/html/console.itellyou.site/application
 COPY ./extend /usr/local/nginx/html/console.itellyou.site/extend
