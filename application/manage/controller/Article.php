@@ -96,7 +96,7 @@ class Article extends Base
               'article_date'    => date('Y-m-d H:i:s'),                   //文章发布时间
               'article_excerpt' => $articleExcerpt,                       //文章摘录
               'article_content' => $articleContent,                       //文章内容
-              'article_content' => $articleCode,                          //文章源码，处理小程序
+              'article_code'    => $articleCode,                          //文章源码，处理小程序
               'article_status'  => (empty($articleStatus)) ? 'close':'open',                              //文章状态，是否公开
               'article_password'=> $articlePassword,                        //文章密码
               'article_name'    => $articleName,                           //文章缩略名
