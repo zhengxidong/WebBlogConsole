@@ -8,6 +8,8 @@ COPY ./thinkphp /usr/local/nginx/html/console.itellyou.site/thinkphp
 COPY ./vendor /usr/local/nginx/html/console.itellyou.site/vendor
 COPY ./etc/nginx/conf.d/console.itellyou.site.conf /etc/nginx/conf.d/console.itellyou.site.conf
 
+RUN chmod 777 -R /usr/local/nginx/html/console.itellyou.site/runtime
+
 EXPOSE 80
 CMD ["/usr/bin/supervisord"]
  
